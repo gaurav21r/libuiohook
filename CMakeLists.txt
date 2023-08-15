@@ -25,7 +25,7 @@ if (WIN32 OR WIN64)
 elseif (APPLE)
     set(UIOHOOK_SOURCE_DIR "darwin")
 else()
-    set(UIOHOOK_SOURCE_DIR "x11")
+    set(UIOHOOK_SOURCE_DIR "evdev")
 endif()
 
 add_library(uiohook
@@ -146,6 +146,17 @@ if(UNIX AND NOT APPLE)
     pkg_check_modules(XTST REQUIRED xtst)
     target_include_directories(uiohook PRIVATE "${XTST_INCLUDE_DIRS}")
     target_link_libraries(uiohook "${XTST_LDFLAGS}")
+
+    pkg_check_modules(XINPUT REQUIRED xi)
+    target_include_directories(uiohook PRIVATE "${XINPUT_INCLUDE_DIRS}")
+    target_link_libraries(uiohook "${XINPUT_LDFLAGS}")
+
+    pkg_check_modules(EVDEV REQUIRED libevdev)
+    target_include_directories(uiohook PRIVATE "${EVDEV_INCLUDE_DIRS}")
+    target_link_libraries(uiohook "${EVDEV_LDFLAGS}")
+
+    include(CMakePrintHelpers)
+    cmake_print_variables(EVDEV_INCLUDE_DIRS)
 
     include(CheckLibraryExists)
     check_library_exists(Xtst XRecordQueryVersion "" HAVE_XRECORD)
