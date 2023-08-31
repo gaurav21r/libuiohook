@@ -24,10 +24,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
-
+#include <sys/epoll.h>
 #include <libevdev/libevdev.h>
-#include <X11/extensions/XI.h> // This is only required for the #define DeviceMode (1L << 0)
-#include <X11/extensions/XInput2.h>
+#include <libevdev/libevdev-uinput.h>
+
 
 
 #ifdef USE_XRECORD_ASYNC
@@ -68,23 +68,14 @@ static pthread_cond_t hook_xrecord_cond = PTHREAD_COND_INITIALIZER;
 static pthread_mutex_t hook_xrecord_mutex = PTHREAD_MUTEX_INITIALIZER;
 #endif
 
-typedef struct _hook_info {
-    struct _data {
-        Display *display;
-        XRecordRange *range;
-    } data;
-    struct _ctrl {
-        Display *display;
-        XRecordContext context;
-    } ctrl;
-} hook_info;
-static hook_info *hook;
+
 
 // Virtual event pointer.
 static uiohook_event event;
 
 
 void hook_event_proc(XPointer closeure, XRecordInterceptData *recorded_data) {
+
     XEvent event;
     wire_data_to_event(recorded_data, &event);
 
@@ -146,6 +137,8 @@ void hook_event_proc(XPointer closeure, XRecordInterceptData *recorded_data) {
 static int xrecord_block() {
     int status = UIOHOOK_FAILURE;
 
+    /*
+
     // Save the data display associated with this hook so it is passed to each event.
     //XPointer closeure = (XPointer) (ctrl_display);
     XPointer closeure = NULL;
@@ -206,6 +199,7 @@ static int xrecord_block() {
         // Set the exit status.
         status = UIOHOOK_ERROR_X_RECORD_ENABLE_CONTEXT;
     }
+    */
 
     return status;
 }
@@ -213,6 +207,7 @@ static int xrecord_block() {
 static int xrecord_alloc() {
     int status = UIOHOOK_FAILURE;
 
+/*
     // Make sure the data display is synchronized to prevent late event delivery!
     // See Bug 42356 for more information.
     // https://bugs.freedesktop.org/show_bug.cgi?id=42356#c4
@@ -259,6 +254,7 @@ static int xrecord_alloc() {
         // Set the exit status.
         status = UIOHOOK_ERROR_X_RECORD_ALLOC_RANGE;
     }
+*/
 
     return status;
 }
@@ -266,6 +262,7 @@ static int xrecord_alloc() {
 static int xrecord_query() {
     int status = UIOHOOK_FAILURE;
 
+    /*
     // Check to make sure XRecord is installed and enabled.
     int major, minor;
     if (XRecordQueryVersion(hook->ctrl.display, &major, &minor) != 0) {
@@ -279,6 +276,7 @@ static int xrecord_query() {
 
         status = UIOHOOK_ERROR_X_RECORD_NOT_FOUND;
     }
+    */
 
     return status;
 }
@@ -286,6 +284,7 @@ static int xrecord_query() {
 static int xrecord_start() {
     int status = UIOHOOK_FAILURE;
 
+    /*
     // Use the helper display for XRecord.
     hook->ctrl.display = XOpenDisplay(NULL);
 
@@ -327,75 +326,199 @@ static int xrecord_start() {
         XCloseDisplay(hook->ctrl.display);
         hook->ctrl.display = NULL;
     }
+    */
 
     return status;
 }
 
-typedef struct _hook_info_test {
-    int fd;
+
+struct hook_info {
     struct libevdev *evdev;
-} hook_info_test;
+    struct libevdev_uinput *uinput;
+};
 
 UIOHOOK_API int hook_run() {
-    // Hook data for future cleanup.
-    hook = malloc(sizeof(hook_info));
-    if (hook == NULL) {
-        logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to allocate memory for hook structure!\n",
+    glob_t glob_buffer;
+    int glob_status = glob("/dev/input/event*",  GLOB_ERR | GLOB_NOSORT | GLOB_NOESCAPE, NULL, &glob_buffer); // /dev/input/by-path/*event? TODO use a compile time variable
+    switch (glob_status) {
+        case GLOB_NOSPACE:
+            // FIXME logging
+            return UIOHOOK_ERROR_OUT_OF_MEMORY;
+
+        case GLOB_NOMATCH:
+            logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to locate any event devices at %s!\n",
+                    __FUNCTION__, __LINE__,
+                    "/dev/input");
+            // FIXME No event devices found!
+            return UIOHOOK_FAILURE;
+
+        case GLOB_ABORTED:
+            // FIXME logging
+            return UIOHOOK_FAILURE;
+    }
+
+
+    struct hook_info *hook_buffer = malloc(sizeof(struct hook_info) * glob_buffer.gl_pathc);
+    if (hook_buffer == NULL) {
+        logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to allocate memory for evdev buffer!\n",
                 __FUNCTION__, __LINE__);
 
         return UIOHOOK_ERROR_OUT_OF_MEMORY;
     }
 
-    glob_t globbuf;
-    if (glob("/dev/input/event*",  GLOB_ERR | GLOB_NOSORT | GLOB_NOESCAPE, NULL, &globbuf) == 0) {
-        int hook_c = 0;
-        hook_info_test *hooks = malloc(sizeof(hook_info_test) * globbuf.gl_pathc);
+    struct epoll_event *event_buffer = malloc(sizeof(struct epoll_event) * glob_buffer.gl_pathc);
+    if (event_buffer == NULL) {
+        logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to allocate memory for epoll event buffer!\n",
+                __FUNCTION__, __LINE__);
 
-        struct libevdev *evdev;
-
-        char **found = globbuf.gl_pathv;
-        while(*found)
-        {
-            int fd = open(*found, O_RDONLY | O_NONBLOCK);
-            if (fd >= 0) {
-                int rc = libevdev_new_from_fd(fd, &evdev);
-                if (rc >= 0) {
-                    if (libevdev_has_event_type(evdev, EV_REP)) {
-                        printf("Found Keyboard Device: %s\n", *found);
-
-                        hooks[hook_c].fd = fd;
-                        hooks[hook_c].evdev = evdev;
-                        hook_c++;
-                    } else if (libevdev_has_event_type(evdev, EV_REL) && libevdev_has_event_code(evdev, EV_KEY, BTN_LEFT)) {
-                        printf("Found Pointing Device: %s\n", *found);
-
-                        hooks[hook_c].fd = fd;
-                        hooks[hook_c].evdev = evdev;
-                        hook_c++;
-                    }
-                } else {
-                    // FIXME Error log rc
-                    close(fd);
-                }
-            } else {
-                // FIXME Error log errno
-            }
-
-            //libevdev_free(evdev);
-            //close(fd);
-
-            found++;
-        }
-
-        globfree(&globbuf);
+        return UIOHOOK_ERROR_OUT_OF_MEMORY;
     }
 
-    return UIOHOOK_SUCCESS;
+
+    int epoll_fd = epoll_create1(0);
+    if (epoll_fd == -1) {
+        // FIXME Error
+        fprintf(stderr, "Failed to create epoll file descriptor\n");
+        return UIOHOOK_ERROR_EPOLL_CREATE;
+    }
 
 
-    // Free data associated with this hook.
-    free(hook);
-    hook = NULL;
+    int found = 0, err = 0;
+    for (int i = 0; i < glob_buffer.gl_pathc; i++) {
+        int fd = open(glob_buffer.gl_pathv[i], O_RDONLY | O_NONBLOCK);
+        if (fd < 0) {
+            // FIXME Error log errno
+            logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to open file: %s! (%#X) (errno)\n",
+                    __FUNCTION__, __LINE__,
+                    glob_buffer.gl_pathv[i], O_RDONLY | O_NONBLOCK);
+            continue;
+        }
+
+        err = libevdev_new_from_fd(fd, &hook_buffer[found].evdev);
+        if (err < 0) {
+            // FIXME Error log err
+            logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to create evdev from file descriptor! (%d)\n",
+                    __FUNCTION__, __LINE__,
+                    err);
+            close(fd);
+            continue;
+        }
+
+
+        err = libevdev_uinput_create_from_device(hook_buffer[found].evdev, LIBEVDEV_UINPUT_OPEN_MANAGED, &hook_buffer[found].uinput);
+        if (err < 0) {
+            // FIXME Error log err
+            logger(LOG_LEVEL_ERROR, "%s [%u]: Failed to create uinput from device! (%d)\n",
+                    __FUNCTION__, __LINE__,
+                    err);
+
+            //libevdev_free(hook_buffer[found].evdev);
+            //close(fd);
+            continue;
+        }
+
+        if (libevdev_has_event_type(hook_buffer[found].evdev, EV_REP) && libevdev_has_event_code(hook_buffer[found].evdev, EV_KEY, KEY_ESC)) {
+            printf("Found Keyboard Device: %s\n", glob_buffer.gl_pathv[i]);
+        } else if (libevdev_has_event_type(hook_buffer[found].evdev, EV_REL) && libevdev_has_event_code(hook_buffer[found].evdev, EV_KEY, BTN_LEFT)) {
+            printf("Found Pointing Device: %s\n", glob_buffer.gl_pathv[i]);
+        } else {
+            printf("Unsupported Device: %s\n", glob_buffer.gl_pathv[i]);
+            // Unsupported device, ignore.
+            libevdev_uinput_destroy(hook_buffer[found].uinput);
+            libevdev_free(hook_buffer[found].evdev);
+            close(fd);
+            continue;
+        }
+
+        event_buffer[found].events = EPOLLIN;
+        event_buffer[found].data.fd = fd;
+        event_buffer[found].data.ptr = &hook_buffer[found];
+
+        printf("Testing adding %p %d\n", &hook_buffer[found], event_buffer[found].data.fd);
+
+        if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, fd, &event_buffer[found]))
+        {
+            // FIXME Error
+            fprintf(stderr, "Failed to add file descriptor to epoll\n");
+
+            // Unsupported device, ignore.
+            libevdev_uinput_destroy(hook_buffer[found].uinput);
+            libevdev_free(hook_buffer[found].evdev);
+            close(fd);
+            continue;
+        }
+
+        found++;
+    }
+    globfree(&glob_buffer);
+
+
+    struct hook_info *hooks = realloc(hook_buffer, sizeof(struct hook_info) * found);
+    if (hooks == NULL) {
+        // FIXME Warning,
+        hooks = hook_buffer;
+    }
+
+    struct epoll_event *devices = realloc(event_buffer, sizeof(struct epoll_event) * found);
+    if (devices == NULL) {
+        // FIXME Warning,
+        devices = event_buffer;
+    }
+
+
+    // Now we implement epoll on the remaining FDs?
+    struct epoll_event events[16];
+    int event_count;
+
+    struct input_event ev;
+    while (1) {
+		printf("\nPolling for input...\n");
+		event_count = epoll_wait(epoll_fd, events, 16, 30000);
+		printf("%d ready events\n", event_count);
+		for (int i = 0; i < event_count; i++) {
+			printf("Reading file descriptor %p '%d' -- ", events[i].data.ptr, events[i].data.fd);
+
+            struct hook_info *device = (struct hook_info *) events[i].data.ptr;
+
+            err = libevdev_next_event(device->evdev, LIBEVDEV_READ_FLAG_NORMAL, &ev);
+            if (err == LIBEVDEV_READ_STATUS_SUCCESS) {
+                /*
+                if (ev.type == EV_KEY && ev.code == KEY_HOME) {
+                    ev.code = KEY_B;
+                }
+                */
+
+                //libevdev_uinput_write_event(device->uinput, ev.type, ev.code, ev.value);
+                printf("LIBEVDEV_READ_STATUS_SUCCESS\n");
+            } else if (err == LIBEVDEV_READ_STATUS_SYNC) {
+                do {
+                    err = libevdev_next_event(device->evdev, LIBEVDEV_READ_FLAG_SYNC, &ev);
+                } while (err != -EAGAIN);
+
+                printf("LIBEVDEV_READ_STATUS_SYNC\n");
+            } else if (err == -EAGAIN) {
+                printf("EAGAIN\n");
+                continue;
+            } else {
+                printf("????\n");
+                // Error reading event
+                break;
+            }
+		}
+	}
+
+	if (close(epoll_fd)) {
+		fprintf(stderr, "Failed to close epoll file descriptor\n");
+		return 1;
+	}
+
+    if (hook_buffer != NULL) {
+        free(hook_buffer);
+    }
+
+    if (event_buffer != NULL) {
+        free(event_buffer);
+    }
 
     logger(LOG_LEVEL_DEBUG, "%s [%u]: Something, something, something, complete.\n",
             __FUNCTION__, __LINE__);
@@ -407,6 +530,7 @@ UIOHOOK_API int hook_run() {
 UIOHOOK_API int hook_stop() {
     int status = UIOHOOK_FAILURE;
 
+/*
     if (hook != NULL && hook->ctrl.display != NULL && hook->ctrl.context != 0) {
         // We need to make sure the context is still valid.
         XRecordState *state = malloc(sizeof(XRecordState));
@@ -443,6 +567,7 @@ UIOHOOK_API int hook_stop() {
             status = UIOHOOK_ERROR_OUT_OF_MEMORY;
         }
     }
+    */
 
     logger(LOG_LEVEL_DEBUG, "%s [%u]: Status: %#X.\n",
             __FUNCTION__, __LINE__, status);
