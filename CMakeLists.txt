@@ -82,6 +82,10 @@ if (BUILD_DEMO)
     add_dependencies(demo_hook uiohook)
     target_link_libraries(demo_hook uiohook "${CMAKE_THREAD_LIBS_INIT}")
 
+    add_executable(ultracap_hook "./demo/ultracap_hook.c")
+    add_dependencies(ultracap_hook uiohook)
+    target_link_libraries(ultracap_hook uiohook "${CMAKE_THREAD_LIBS_INIT}")
+
     add_executable(demo_hook_async "./demo/demo_hook_async.c")
     add_dependencies(demo_hook_async uiohook)
     target_link_libraries(demo_hook_async uiohook "${CMAKE_THREAD_LIBS_INIT}")
@@ -96,6 +100,7 @@ if (BUILD_DEMO)
 
     add_custom_target(all_demos DEPENDS
         demo_hook
+        ultracap_hook
         demo_hook_async
         demo_post
         demo_properties
@@ -115,7 +120,7 @@ if (BUILD_DEMO)
         endif()
     endif()
 
-    install(TARGETS demo_hook demo_hook_async demo_post demo_properties RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(TARGETS ultracap_hook demo_hook demo_hook_async demo_post demo_properties RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif()
 
 if(ENABLE_TEST)
