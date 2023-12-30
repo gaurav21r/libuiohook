@@ -1,0 +1,13 @@
+C:/htdocs/libuiohook/build/CMakeFiles/uiohook.dir
+C:/htdocs/libuiohook/build/CMakeFiles/demo_hook.dir
+C:/htdocs/libuiohook/build/CMakeFiles/ultracap_hook.dir
+C:/htdocs/libuiohook/build/CMakeFiles/demo_hook_async.dir
+C:/htdocs/libuiohook/build/CMakeFiles/demo_post.dir
+C:/htdocs/libuiohook/build/CMakeFiles/demo_properties.dir
+C:/htdocs/libuiohook/build/CMakeFiles/all_demos.dir
+C:/htdocs/libuiohook/build/CMakeFiles/edit_cache.dir
+C:/htdocs/libuiohook/build/CMakeFiles/rebuild_cache.dir
+C:/htdocs/libuiohook/build/CMakeFiles/list_install_components.dir
+C:/htdocs/libuiohook/build/CMakeFiles/install.dir
+C:/htdocs/libuiohook/build/CMakeFiles/install/local.dir
+C:/htdocs/libuiohook/build/CMakeFiles/install/strip.dir

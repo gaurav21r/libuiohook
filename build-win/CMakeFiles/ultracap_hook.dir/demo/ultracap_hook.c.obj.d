@@ -1,0 +1,35 @@
+CMakeFiles/ultracap_hook.dir/demo/ultracap_hook.c.obj: \
+ C:\htdocs\libuiohook\demo\ultracap_hook.c \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/inttypes.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdbool.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/htdocs/libuiohook/include/uiohook.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/wchar.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/time.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/pthread_time.h

@@ -1,0 +1,413 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:20 (project)"
+    message: |
+      The system is: Windows - 10.0.19044 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:20 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/Ramanans/mingw64/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/htdocs/libuiohook/build/CMakeFiles/3.28.1/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:20 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl"
+      binary: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/Ramanans/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0fc6a/fast
+        C:/Users/Ramanans/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0fc6a.dir\\build.make CMakeFiles/cmTC_0fc6a.dir/build
+        mingw32-make[1]: Entering directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl'
+        Building C object CMakeFiles/cmTC_0fc6a.dir/CMakeCCompilerABI.c.obj
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-13.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libstdcxx-threads=yes --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev1, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds CFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: win32
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (x86_64-win32-seh-rev1, Built by MinGW-Builds project) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\'
+         C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_0fc6a.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\Ramanans\\AppData\\Local\\Temp\\cctRf76F.s
+        GNU C17 (x86_64-win32-seh-rev1, Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"
+        ignoring nonexistent directory "C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include"
+        ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"
+        ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include
+         C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed
+         C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: 3023d29675046d544eee45062e930055
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\'
+         C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Ramanans\\AppData\\Local\\Temp\\cctRf76F.s
+        GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
+        COMPILER_PATH=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Users/Ramanans/mingw64/bin/../libexec/gcc/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_0fc6a.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0fc6a.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0fc6a.dir/objects.a
+        C:\\Users\\Ramanans\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_0fc6a.dir/objects.a @CMakeFiles\\cmTC_0fc6a.dir\\objects1.rsp
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_0fc6a.dir/objects.a -Wl,--no-whole-archive -o cmTC_0fc6a.exe -Wl,--out-implib,libcmTC_0fc6a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-13.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libstdcxx-threads=yes --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev1, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds CFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: win32
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (x86_64-win32-seh-rev1, Built by MinGW-Builds project) 
+        COMPILER_PATH=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Users/Ramanans/mingw64/bin/../libexec/gcc/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0fc6a.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_0fc6a.'
+         C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Ramanans\\AppData\\Local\\Temp\\ccP1AB2I.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_0fc6a.exe C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Users/Ramanans/mingw64/bin/../lib/gcc -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. --whole-archive CMakeFiles\\cmTC_0fc6a.dir/objects.a --no-whole-archive --out-implib libcmTC_0fc6a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0fc6a.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_0fc6a.'
+        mingw32-make[1]: Leaving directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:20 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+          add: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+          add: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include] ==> [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        collapse include dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed] ==> [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        collapse include dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include;C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed;C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:20 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/Ramanans/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0fc6a/fast]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0fc6a.dir\\build.make CMakeFiles/cmTC_0fc6a.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-javczl']
+        ignore line: [Building C object CMakeFiles/cmTC_0fc6a.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-13.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libstdcxx-threads=yes --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev1, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds CFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: win32]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (x86_64-win32-seh-rev1  Built by MinGW-Builds project) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\']
+        ignore line: [ C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1.exe -quiet -v -iprefix C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_0fc6a.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\Ramanans\\AppData\\Local\\Temp\\cctRf76F.s]
+        ignore line: [GNU C17 (x86_64-win32-seh-rev1  Built by MinGW-Builds project) version 13.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"]
+        ignore line: [ignoring nonexistent directory "C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/Ramanans/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        ignore line: [ C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        ignore line: [ C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 3023d29675046d544eee45062e930055]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\']
+        ignore line: [ C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Ramanans\\AppData\\Local\\Temp\\cctRf76F.s]
+        ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
+        ignore line: [COMPILER_PATH=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_0fc6a.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_0fc6a.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0fc6a.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0fc6a.dir/objects.a]
+        ignore line: [C:\\Users\\Ramanans\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_0fc6a.dir/objects.a @CMakeFiles\\cmTC_0fc6a.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_0fc6a.dir/objects.a -Wl --no-whole-archive -o cmTC_0fc6a.exe -Wl --out-implib libcmTC_0fc6a.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-13.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libstdcxx-threads=yes --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libssp --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev1, Built by MinGW-Builds project' --with-bugurl=https://github.com/niXman/mingw-builds CFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/include -I/c/buildroot/prerequisites/x86_64-zlib-static/include -I/c/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/opt/lib -L/c/buildroot/prerequisites/x86_64-zlib-static/lib -L/c/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/c/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: win32]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (x86_64-win32-seh-rev1  Built by MinGW-Builds project) ]
+        ignore line: [COMPILER_PATH=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0fc6a.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_0fc6a.']
+        link line: [ C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Ramanans\\AppData\\Local\\Temp\\ccP1AB2I.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_0fc6a.exe C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Users/Ramanans/mingw64/bin/../lib/gcc -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. --whole-archive CMakeFiles\\cmTC_0fc6a.dir/objects.a --no-whole-archive --out-implib libcmTC_0fc6a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+          arg [C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/Users/Ramanans/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\Ramanans\\AppData\\Local\\Temp\\ccP1AB2I.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-liconv] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [--sysroot=C:/buildroot/x86_64-1320-win32-seh-msvcrt-rt_v11-rev1/mingw64] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_0fc6a.exe] ==> ignore
+          arg [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o] ==> obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..] ==> dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..]
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_0fc6a.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_0fc6a.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o] ==> obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o] ==> [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o]
+        collapse obj [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o] ==> [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0] ==> [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc] ==> [C:/Users/Ramanans/mingw64/lib/gcc]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib] ==> [C:/Users/Ramanans/mingw64/lib]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../..] ==> [C:/Users/Ramanans/mingw64/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/lib/crt2.o;C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o;C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        implicit dirs: [C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0;C:/Users/Ramanans/mingw64/lib/gcc;C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/lib;C:/Users/Ramanans/mingw64/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:79 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-pcqko1"
+      binary: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-pcqko1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-pcqko1'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/Ramanans/mingw64/bin/mingw32-make.exe -f Makefile cmTC_415c4/fast
+        C:/Users/Ramanans/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_415c4.dir\\build.make CMakeFiles/cmTC_415c4.dir/build
+        mingw32-make[1]: Entering directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-pcqko1'
+        Building C object CMakeFiles/cmTC_415c4.dir/src.c.obj
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_415c4.dir\\src.c.obj -c C:\\htdocs\\libuiohook\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pcqko1\\src.c
+        Linking C executable cmTC_415c4.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_415c4.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_415c4.dir/objects.a
+        C:\\Users\\Ramanans\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_415c4.dir/objects.a @CMakeFiles\\cmTC_415c4.dir\\objects1.rsp
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_415c4.dir/objects.a -Wl,--no-whole-archive -o cmTC_415c4.exe -Wl,--out-implib,libcmTC_415c4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_415c4.dir\\linkLibs.rsp
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_415c4.dir/objects.a(src.c.obj):src.c:(.text+0x35): undefined reference to `pthread_create'
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_415c4.dir/objects.a(src.c.obj):src.c:(.text+0x41): undefined reference to `pthread_detach'
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_415c4.dir/objects.a(src.c.obj):src.c:(.text+0x4d): undefined reference to `pthread_cancel'
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_415c4.dir/objects.a(src.c.obj):src.c:(.text+0x5e): undefined reference to `pthread_join'
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_415c4.dir/objects.a(src.c.obj):src.c:(.text+0x68): undefined reference to `pthread_exit'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_415c4.dir\\build.make:100: cmTC_415c4.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-pcqko1'
+        mingw32-make: *** [Makefile:126: cmTC_415c4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "CMakeLists.txt:79 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-d4sbev"
+      binary: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-d4sbev"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-d4sbev'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/Ramanans/mingw64/bin/mingw32-make.exe -f Makefile cmTC_7b90d/fast
+        C:/Users/Ramanans/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_7b90d.dir\\build.make CMakeFiles/cmTC_7b90d.dir/build
+        mingw32-make[1]: Entering directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-d4sbev'
+        Building C object CMakeFiles/cmTC_7b90d.dir/CheckFunctionExists.c.obj
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\\cmTC_7b90d.dir\\CheckFunctionExists.c.obj -c C:\\htdocs\\libuiohook\\build\\CMakeFiles\\CMakeScratch\\TryCompile-d4sbev\\CheckFunctionExists.c
+        Linking C executable cmTC_7b90d.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_7b90d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_7b90d.dir/objects.a
+        C:\\Users\\Ramanans\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_7b90d.dir/objects.a @CMakeFiles\\cmTC_7b90d.dir\\objects1.rsp
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\\cmTC_7b90d.dir/objects.a -Wl,--no-whole-archive -o cmTC_7b90d.exe -Wl,--out-implib,libcmTC_7b90d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_7b90d.dir\\linkLibs.rsp
+        C:/Users/Ramanans/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpthreads: No such file or directory
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_7b90d.dir\\build.make:100: cmTC_7b90d.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-d4sbev'
+        mingw32-make: *** [Makefile:126: cmTC_7b90d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "CMakeLists.txt:79 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-0omogq"
+      binary: "C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-0omogq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-0omogq'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/Ramanans/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b25db/fast
+        C:/Users/Ramanans/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b25db.dir\\build.make CMakeFiles/cmTC_b25db.dir/build
+        mingw32-make[1]: Entering directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-0omogq'
+        Building C object CMakeFiles/cmTC_b25db.dir/CheckFunctionExists.c.obj
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\\cmTC_b25db.dir\\CheckFunctionExists.c.obj -c C:\\htdocs\\libuiohook\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0omogq\\CheckFunctionExists.c
+        Linking C executable cmTC_b25db.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b25db.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b25db.dir/objects.a
+        C:\\Users\\Ramanans\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b25db.dir/objects.a @CMakeFiles\\cmTC_b25db.dir\\objects1.rsp
+        C:\\Users\\Ramanans\\mingw64\\bin\\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\\cmTC_b25db.dir/objects.a -Wl,--no-whole-archive -o cmTC_b25db.exe -Wl,--out-implib,libcmTC_b25db.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b25db.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/htdocs/libuiohook/build/CMakeFiles/CMakeScratch/TryCompile-0omogq'
+        
+      exitCode: 0
+...

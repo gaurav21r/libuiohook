@@ -1,0 +1,11 @@
+C:/htdocs/libuiohook/dist/lib/libuiohook.dll.a
+C:/htdocs/libuiohook/dist/bin/libuiohook.dll
+C:/htdocs/libuiohook/dist/include/uiohook.h
+C:/htdocs/libuiohook/dist/lib/cmake/uiohook/uiohook-config.cmake
+C:/htdocs/libuiohook/dist/lib/cmake/uiohook/uiohook-config-noconfig.cmake
+C:/htdocs/libuiohook/dist/bin/ultracap_hook.exe
+C:/htdocs/libuiohook/dist/bin/demo_hook.exe
+C:/htdocs/libuiohook/dist/bin/demo_hook_async.exe
+C:/htdocs/libuiohook/dist/bin/demo_post.exe
+C:/htdocs/libuiohook/dist/bin/demo_properties.exe
+C:/htdocs/libuiohook/dist/lib/pkgconfig/uiohook.pc

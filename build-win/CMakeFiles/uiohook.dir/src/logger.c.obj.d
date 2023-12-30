@@ -1,0 +1,23 @@
+CMakeFiles/uiohook.dir/src/logger.c.obj: \
+ C:\htdocs\libuiohook\src\logger.c \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdbool.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Users/Ramanans/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Users/Ramanans/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/htdocs/libuiohook/include/uiohook.h C:\htdocs\libuiohook\src\logger.h

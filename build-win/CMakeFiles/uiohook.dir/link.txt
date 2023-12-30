@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\uiohook.dir/objects.a
+C:\Users\Ramanans\mingw64\bin\ar.exe qc CMakeFiles\uiohook.dir/objects.a @CMakeFiles\uiohook.dir\objects1.rsp
+C:\Users\Ramanans\mingw64\bin\gcc.exe -shared -o libuiohook.dll -Wl,--out-implib,libuiohook.dll.a -Wl,--major-image-version,1,--minor-image-version,2 -Wl,--whole-archive CMakeFiles\uiohook.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\uiohook.dir\linkLibs.rsp

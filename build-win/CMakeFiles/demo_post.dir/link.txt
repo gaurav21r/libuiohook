@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\demo_post.dir/objects.a
+C:\Users\Ramanans\mingw64\bin\ar.exe qc CMakeFiles\demo_post.dir/objects.a @CMakeFiles\demo_post.dir\objects1.rsp
+C:\Users\Ramanans\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\demo_post.dir/objects.a -Wl,--no-whole-archive -o demo_post.exe -Wl,--out-implib,libdemo_post.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\demo_post.dir\linkLibs.rsp
